@@ -16,7 +16,7 @@
 	--blue: #0a61ae;
 	--blue-100: #e2f8ff;
 	--blue-400: #61dafb;
-	--blue-800: #0a61ae;
+	--blue-800: #0a61ae; 
 }
 
 body  {
@@ -128,6 +128,74 @@ header {
                     display: flex;
                 }
             }
+        }
+    }
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: var(--blue);
+    color: var(--base-100);
+    border-radius: 10px;
+    transition: ease 0.3s all;
+
+    &:hover {
+        text-decoration: none;
+        background-color: var(--base-800);
+    }
+    &.white {
+        background-color: white;
+        color: var(--base-800);
+        &:hover {
+            color: var(--blue-800);
+        }
+    }
+    &.black {
+        background-color: black;
+        color: white;
+        &:hover {
+            color: var(--base);
+        }
+    }
+}
+
+.container {
+    max-width: 1440px;
+    margin: auto;
+    gap: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    @media (max-width: 1440px) {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+}
+
+.hero {
+    display:flex;
+    .hero-blue {
+        flex: 1;
+        background-color: var(--blue-100);
+        border-radius: 30px;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .hero-yellow {
+        flex: 1;
+        background-color: var(--yellow);
+        border-radius: 30px;
+        padding: 0px 30px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        img {
+            margin-top: -60px;
+            max-width: 420px;
         }
     }
 }
